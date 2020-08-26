@@ -78,12 +78,12 @@ export const convertCollectionsSnapshotToMap = collections => {
 	}, {});
 };
 
-export const getCurentUser = () => {
+export const getCurrentUser = () => {
 	return new Promise((resolve, reject) => {
 		const unsubscribe = auth.onAuthStateChange(userAuth => {
 			unsubscribe();
 			resolve(userAuth);
-		}, reject)
+		}, reject);
 	});
 };
 
